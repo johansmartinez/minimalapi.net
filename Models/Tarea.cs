@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 public class Tarea
 {
-    [Key]
+    //[Key]
     public Guid TareaId {get;set;}
-    [ForeignKey("CategoriaId")]//laves foraneas
+    //[ForeignKey("CategoriaId")]//laves foraneas
     public Guid CategoriaId {get;set;}
-    [Required]
-    [MaxLength(200)]
+    //[Required]
+    //[MaxLength(200)]
     public string Titulo {get;set;}
 
     public string Descripcion {get;set;}
@@ -18,7 +18,7 @@ public class Tarea
 
     public virtual Categoria Categoria {get;set;}
 
-    [NotMapped] //no lo agrega a la base de datos
+    //[NotMapped] //no lo agrega a la base de datos
     public string Resumen {get;set;}
 }
 
